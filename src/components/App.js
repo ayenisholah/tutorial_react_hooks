@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import ResourceList from './ResourceList';
-
+import Users from './Users';
 
 const App = () => {
 
@@ -16,6 +16,7 @@ const App = () => {
     < React.Fragment >
       <button onClick={() => setresourceName('posts')}>Posts</button>
       <button onClick={() => setresourceName('todos')}>Todos</button>
+      <Users />
       <ResourceList resourceName={resourceName} />
     </React.Fragment >
   )
