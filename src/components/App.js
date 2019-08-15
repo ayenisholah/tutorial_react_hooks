@@ -2,30 +2,22 @@ import React, { useState, useEffect } from 'react';
 
 import ResourceList from './ResourceList';
 
-// class App extends React.Component {
-//   state = {
-//     resourceName: 'posts'
-//   }
-
-//   render() {
-//     return (
-//       <React.Fragment>
-//         <button onClick={() => this.setState({ resourceName: 'posts' })}>Posts</button>
-//         <button onClick={() => this.setState({ resourceName: 'todos' })}>Todos</button>
-//         <ResourceList resourceName={this.state.resourceName}/>
-//       </React.Fragment>
-//     )
-//   }
-// }
-
 
 const App = () => {
+
+  const [resourceName, setresourceName] = useState('post')
+
   return (
-    <React.Fragment>
-      <button onClick={() => this.setState({ resourceName: 'posts' })}>Posts</button>
-      <button onClick={() => this.setState({ resourceName: 'todos' })}>Todos</button>
-      <ResourceList resourceName={this.state.resourceName} />
-    </React.Fragment>
+
+    // resourceName === currentState resourceName
+    // setresourceName === function that changes resourceName
+    // useState === function (params === initialState)
+
+    < React.Fragment >
+      <button onClick={() => setresourceName('posts')}>Posts</button>
+      <button onClick={() => setresourceName('todos')}>Todos</button>
+      <ResourceList resourceName={resourceName} />
+    </React.Fragment >
   )
 }
 
